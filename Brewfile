@@ -2,6 +2,8 @@
 # Binaries                                                                     #
 ################################################################################
 
+# Asciidoctor - AsciiDoc processor
+brew "asciidoctor"
 # Unix Coreutils (Those that come with macos are outdated)
 brew "coreutils"
 # FZF general-purpose command-line fuzzy finder
