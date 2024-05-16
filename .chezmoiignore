@@ -1,7 +1,7 @@
+**/.DS_Store
 README.md
 Brewfile
 Brewfile.lock
 
-#.config/zsh/ohmyzsh/cache/completions/
 .config/zsh/ohmyzsh/cache/
 **/*.zwc
