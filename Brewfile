@@ -9,6 +9,8 @@ tap "homebrew/cask-fonts"
 
 # Asciidoctor - AsciiDoc processor
 brew "asciidoctor"
+# chezmoi dotfiles management tool
+brew "chezmoi"
 # Unix Coreutils (Those that come with macos are outdated)
 brew "coreutils"
 # FZF general-purpose command-line fuzzy finder
