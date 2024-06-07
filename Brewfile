@@ -28,6 +28,8 @@ brew "neovim"
 # Apps                                                                         #
 ################################################################################
 
+# Docker Desktop
+cask "docker"
 # iTerm 2 Terminal emulator
 cask "iterm2"
 
