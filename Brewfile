@@ -30,6 +30,8 @@ brew "neovim"
 
 # Docker Desktop
 cask "docker"
+# GPG Suite to sign git commits
+cask "gpg-suite"
 # iTerm 2 Terminal emulator
 cask "iterm2"
 
