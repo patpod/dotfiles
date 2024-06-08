@@ -23,6 +23,8 @@ brew "git"
 brew "jq"
 # The Neovim editor
 brew "neovim"
+# OpenJDK
+brew "openjdk"
 
 ################################################################################
 # Apps                                                                         #
