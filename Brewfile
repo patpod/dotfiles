@@ -25,6 +25,8 @@ brew "jq"
 brew "neovim"
 # OpenJDK
 brew "openjdk"
+# tree command
+brew "tree"
 
 ################################################################################
 # Apps                                                                         #
