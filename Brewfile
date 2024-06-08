@@ -2,6 +2,7 @@
 # Taps                                                                         #
 ################################################################################
 tap "homebrew/cask-fonts"
+tap "avisi-cloud/tools" # for structurizr-site-generatr
 
 ################################################################################
 # Binaries                                                                     #
@@ -25,6 +26,8 @@ brew "jq"
 brew "neovim"
 # OpenJDK
 brew "openjdk"
+# Structurizr-site-generatr C4 documentation builder
+brew "structurizr-site-generatr"
 # tree command
 brew "tree"
 
