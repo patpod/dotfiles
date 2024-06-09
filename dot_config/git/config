@@ -1,0 +1,28 @@
+[init]
+	defaultBranch = master
+[user]
+	name = Patrick Podbregar
+	email = patrick.podbregar@bearingpoint.com
+  signingkey = FCDCBEA4DCACB487
+[core]
+	editor = nvim
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = gpg
+
+[IncludeIf "gitdir:~/projects/veroo/"]
+	path = ~/.config/git/gitconfig.veroo
+
+[IncludeIf "gitdir:~/projects/***REMOVED***/"]
+  path = ~/.config/git/gitconfig.***REMOVED***
+
+[IncludeIf "gitdir:~/projects/personal/"]
+	path = ~/.config/git/gitconfig.personal
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
