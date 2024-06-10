@@ -37,6 +37,8 @@ brew "tree"
 # Apps                                                                         #
 ################################################################################
 
+# Cryptomator file encryption tool
+cask "cryptomator"
 # Docker Desktop
 cask "docker"
 # GPG Suite to sign git commits
