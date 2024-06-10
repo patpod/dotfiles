@@ -10,6 +10,8 @@ tap "avisi-cloud/tools" # for structurizr-site-generatr
 
 # Asciidoctor - AsciiDoc processor
 brew "asciidoctor"
+# Bitwarden CLI
+brew "bitwarden-cli"
 # chezmoi dotfiles management tool
 brew "chezmoi"
 # Unix Coreutils (Those that come with macos are outdated)
@@ -41,6 +43,8 @@ cask "docker"
 cask "gpg-suite"
 # iTerm 2 Terminal emulator
 cask "iterm2"
+# Telegram messenger client
+cask "telegram"
 
 ################################################################################
 # Fonts                                                                        #
