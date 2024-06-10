@@ -45,6 +45,8 @@ cask "docker"
 cask "gpg-suite"
 # iTerm 2 Terminal emulator
 cask "iterm2"
+# OBS for streaming and live recording
+cask "obs"
 # Telegram messenger client
 cask "telegram"
 # VLC media player
