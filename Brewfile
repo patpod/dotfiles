@@ -47,6 +47,8 @@ cask "gpg-suite"
 cask "iterm2"
 # OBS for streaming and live recording
 cask "obs"
+# Obsidian PKM note-taking-tool
+cask "obsidian"
 # Telegram messenger client
 cask "telegram"
 # VLC media player
