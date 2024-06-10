@@ -47,6 +47,8 @@ cask "gpg-suite"
 cask "iterm2"
 # Telegram messenger client
 cask "telegram"
+# VLC media player
+cask "vlc"
 
 ################################################################################
 # Fonts                                                                        #
