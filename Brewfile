@@ -43,6 +43,8 @@ brew "tree"
 cask "cryptomator"
 # Docker Desktop
 cask "docker"
+# Google Chrome web browser
+cask "google-chrome"
 # GPG Suite to sign git commits
 cask "gpg-suite"
 # iTerm 2 Terminal emulator
