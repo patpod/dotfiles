@@ -39,6 +39,8 @@ brew "tree"
 # Apps                                                                         #
 ################################################################################
 
+# Bitwarden password manager desktop app
+cask "bitwarden"
 # Cryptomator file encryption tool
 cask "cryptomator"
 # Docker Desktop
