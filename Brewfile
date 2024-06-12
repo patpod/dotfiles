@@ -16,6 +16,8 @@ brew "bitwarden-cli"
 brew "chezmoi"
 # Unix Coreutils (Those that come with macos are outdated)
 brew "coreutils"
+# cUrl http client
+brew "curl"
 # FZF general-purpose command-line fuzzy finder
 # Docs: https://github.com/junegunn/fzf
 brew "fzf"
