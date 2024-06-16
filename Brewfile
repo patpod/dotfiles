@@ -25,6 +25,10 @@ brew "curl"
 brew "fzf"
 # Git
 brew "git"
+# kubectx: a tool to switch the Kubernetes context
+brew "kubectx"
+# kubens: a tool to switch Kubernetes namespaces
+brew "kubens"
 # jq command-line JSON processor
 # Docs: https://jqlang.github.io/jq/
 brew "jq"
@@ -34,6 +38,8 @@ brew "neovim"
 brew "openjdk"
 # Structurizr-site-generatr C4 documentation builder
 brew "structurizr-site-generatr"
+# tfenv: a tool to install and switch Terraform versions
+brew "tfenv"
 # tree command
 brew "tree"
 
