@@ -12,6 +12,8 @@ tap "avisi-cloud/tools" # for structurizr-site-generatr
 brew "asciidoctor"
 # Bitwarden CLI
 brew "bitwarden-cli"
+# Bun Javascript
+brew "bun"
 # chezmoi dotfiles management tool
 brew "chezmoi"
 # Unix Coreutils (Those that come with macos are outdated)
