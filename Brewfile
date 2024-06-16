@@ -34,6 +34,8 @@ brew "kubens"
 brew "jq"
 # The Neovim editor
 brew "neovim"
+# Node Version Manager
+brew "nvm"
 # OpenJDK
 brew "openjdk"
 # Structurizr-site-generatr C4 documentation builder
