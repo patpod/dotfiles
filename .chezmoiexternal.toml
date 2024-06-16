@@ -17,3 +17,10 @@ url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
 exact = true
 stripComponents = 1
 refreshPeriod = "168h"
+
+[".config/zsh/ohmyzsh/custom/plugins/bookmarks"]
+type = "archive"
+url = "https://github.com/zpm-zsh/bookmarks/archive/master.tar.gz"
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"

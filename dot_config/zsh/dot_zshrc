@@ -80,6 +80,7 @@ zstyle ':omz:update' mode disabled  # disable automatic updates (since oh-my-zsh
 plugins=(
   git
   zsh-autosuggestions
+  bookmarks
 )
 
 source $ZSH/oh-my-zsh.sh
