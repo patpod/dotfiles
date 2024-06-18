@@ -75,6 +75,8 @@ cask "spotify"
 cask "telegram"
 # VLC media player
 cask "vlc"
+# Visual Studio Code
+cask "visual-studio-code"
 
 ################################################################################
 # Fonts                                                                        #
