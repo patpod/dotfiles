@@ -1,8 +1,8 @@
 ################################################################################
 # Taps                                                                         #
 ################################################################################
-tap "homebrew/cask-fonts"
 tap "avisi-cloud/tools" # for structurizr-site-generatr
+tap "oven-sh/bun" # for the bun javarscript engine
 
 ################################################################################
 # Binaries                                                                     #
@@ -27,8 +27,6 @@ brew "fzf"
 brew "git"
 # kubectx: a tool to switch the Kubernetes context
 brew "kubectx"
-# kubens: a tool to switch Kubernetes namespaces
-brew "kubens"
 # jq command-line JSON processor
 # Docs: https://jqlang.github.io/jq/
 brew "jq"
@@ -59,6 +57,8 @@ cask "bitwarden"
 cask "cryptomator"
 # Docker Desktop
 cask "docker"
+# Dropbox
+cask "dropbox"
 # Google Chrome web browser
 cask "google-chrome"
 # GPG Suite to sign git commits
