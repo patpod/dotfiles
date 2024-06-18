@@ -49,6 +49,8 @@ brew "tree"
 # Apps                                                                         #
 ################################################################################
 
+# Backlaze data backup tool
+cask "backblaze"
 # Bitwarden password manager desktop app
 cask "bitwarden"
 # Cryptomator file encryption tool
@@ -65,6 +67,8 @@ cask "iterm2"
 cask "obs"
 # Obsidian PKM note-taking-tool
 cask "obsidian"
+# Spotify music player
+cask "spotify"
 # Telegram messenger client
 cask "telegram"
 # VLC media player
