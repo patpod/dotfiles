@@ -32,6 +32,8 @@ brew "kubens"
 # jq command-line JSON processor
 # Docs: https://jqlang.github.io/jq/
 brew "jq"
+# Mac Store commandline client
+brew "mas"
 # The Neovim editor
 brew "neovim"
 # Node Version Manager
@@ -78,3 +80,9 @@ cask "vlc"
 # Fonts                                                                        #
 ################################################################################
 cask "font-fira-code-nerd-font"
+
+
+################################################################################
+# Mac Store apps                                                               #
+################################################################################
+mas ""
