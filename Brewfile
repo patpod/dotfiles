@@ -69,6 +69,8 @@ cask "iterm2"
 cask "obs"
 # Obsidian PKM note-taking-tool
 cask "obsidian"
+# Setapp app collection
+cask "setapp"
 # Spotify music player
 cask "spotify"
 # Telegram messenger client
