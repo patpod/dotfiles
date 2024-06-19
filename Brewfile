@@ -88,3 +88,4 @@ cask "font-fira-code-nerd-font"
 # Mac Store apps                                                               #
 ################################################################################
 mas "Pixea", id: 1507782672
+mas "Magnet", id: 441258766
