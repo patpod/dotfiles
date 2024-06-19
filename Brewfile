@@ -63,6 +63,8 @@ cask "dropbox"
 cask "google-chrome"
 # GPG Suite to sign git commits
 cask "gpg-suite"
+# Home Assistant companion app
+cask "home-assistant"
 # iTerm 2 Terminal emulator
 cask "iterm2"
 # OBS for streaming and live recording
