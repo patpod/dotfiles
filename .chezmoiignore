@@ -5,3 +5,5 @@ Brewfile.lock
 
 .config/zsh/ohmyzsh/cache/
 **/*.zwc
+
+*.code-workspace
