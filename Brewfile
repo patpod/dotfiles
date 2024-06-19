@@ -55,6 +55,8 @@ cask "backblaze"
 cask "bitwarden"
 # Cryptomator file encryption tool
 cask "cryptomator"
+# DaisyDisk disk space analyser
+cask "daisydisk"
 # Docker Desktop
 cask "docker"
 # Dropbox
