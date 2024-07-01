@@ -51,8 +51,6 @@ brew "tree"
 
 # Backlaze data backup tool
 cask "backblaze"
-# Bitwarden password manager desktop app
-cask "bitwarden"
 # Cryptomator file encryption tool
 cask "cryptomator"
 # DaisyDisk disk space analyser
@@ -96,3 +94,4 @@ cask "font-fira-code-nerd-font"
 mas "Pixea", id: 1507782672
 mas "Magnet", id: 441258766
 mas "DaisyDisk", id: 411643860
+mas "Bitwarden", id: 1352778147
