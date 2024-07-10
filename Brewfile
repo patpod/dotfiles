@@ -73,6 +73,8 @@ cask "obs"
 cask "obsidian"
 # Setapp app collection
 cask "setapp"
+# Signal Messenger
+cask "signal" 
 # Spotify music player
 cask "spotify"
 # Telegram messenger client
