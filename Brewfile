@@ -83,6 +83,8 @@ cask "telegram"
 cask "vlc"
 # Visual Studio Code
 cask "visual-studio-code"
+# Wireshark Network Analyser
+cask "wireshark"
 
 ################################################################################
 # Fonts                                                                        #
