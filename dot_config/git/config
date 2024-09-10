@@ -15,8 +15,8 @@
 [IncludeIf "gitdir:~/projects/veroo/"]
 	path = ~/.config/git/gitconfig.veroo
 
-[IncludeIf "gitdir:~/projects/***REMOVED***/"]
-  path = ~/.config/git/gitconfig.***REMOVED***
+[IncludeIf "gitdir:~/projects/private/"]
+  path = ~/.config/git/gitconfig.private
 
 [IncludeIf "gitdir:~/projects/bearingpoint/"]
 	path = ~/.config/git/gitconfig.bearingpoint
