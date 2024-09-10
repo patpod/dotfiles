@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+# Update Homebrew recipes
+brew update
+
+# Install all our dependencies with bundle (See Brewfile)
+brew tap homebrew/bundle
+brew bundle --file {{ joinPath .chezmoi.sourceDir "Brewfile" | quote }} --no-lock
