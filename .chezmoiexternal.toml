@@ -24,10 +24,3 @@ url = "https://github.com/zpm-zsh/bookmarks/archive/master.tar.gz"
 exact = true
 stripComponents = 1
 refreshPeriod = "168h"
-
-[".config/nvim"]
-type = "archive"
-url = "https://github.com/patpod/nvim-config/archive/refs/heads/master.zip"
-exact = true
-stripComponents = 1
-refreshPeriod = "24h"
