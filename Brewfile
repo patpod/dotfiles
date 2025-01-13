@@ -8,6 +8,10 @@ tap "oven-sh/bun" # for the bun javarscript engine
 # Binaries                                                                     #
 ################################################################################
 
+# Ansible -	Configuration management tool
+brew "ansible"
+# Asible Linter
+brew "ansible-lint"
 # Asciidoctor - AsciiDoc processor
 brew "asciidoctor"
 # Bitwarden CLI
