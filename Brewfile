@@ -79,14 +79,14 @@ cask "daisydisk"
 cask "docker"
 # Dropbox
 cask "dropbox"
+# Ghostty Terminal Emulator
+cask "ghostty"
 # Google Chrome web browser
 cask "google-chrome"
 # GPG Suite to sign git commits
 cask "gpg-suite"
 # Home Assistant companion app
 cask "home-assistant"
-# iTerm 2 Terminal emulator
-cask "iterm2"
 # OBS for streaming and live recording
 cask "obs"
 # Obsidian PKM note-taking-tool
