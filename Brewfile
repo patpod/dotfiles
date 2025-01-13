@@ -56,6 +56,8 @@ brew "imagemagick"
 # ripgrep - a line oriented search tool. Used for support in nvim kickstart.
 # Docs: https://github.com/BurntSushi/ripgrep
 brew "ripgrep"
+# rsync - Commandline tool to synchronize files
+brew "rsync"
 # fd - find alternative command line tool
 brew "fd"
 
