@@ -51,6 +51,8 @@ brew "structurizr-site-generatr"
 brew "tfenv"
 # tree command
 brew "tree"
+# imagemagick image manipulation tool. Used e.g. for some nvim libraries.
+brew "imagemagick"
 
 ################################################################################
 # Apps                                                                         #
