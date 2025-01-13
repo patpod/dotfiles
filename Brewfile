@@ -62,6 +62,8 @@ brew "rsync"
 brew "fd"
 # prettierd - Javascrip formatter daemon
 brew "prettierd"
+# wget http utility
+brew "wget"
 
 ################################################################################
 # Apps                                                                         #
