@@ -3,6 +3,7 @@
 ################################################################################
 tap "avisi-cloud/tools" # for structurizr-site-generatr
 tap "oven-sh/bun" # for the bun javarscript engine
+tap "hashicorp/tap" # for Hashicorp software (e.g. Packer)
 
 ################################################################################
 # Binaries                                                                     #
@@ -42,6 +43,8 @@ brew "neovim"
 brew "nvm"
 # OpenJDK
 brew "openjdk"
+# Hashicorp Packer - Machine Image Builder
+brew "hashicorp/tap/packer"
 # Structurizr-site-generatr C4 documentation builder
 brew "structurizr-site-generatr"
 # tfenv: a tool to install and switch Terraform versions
