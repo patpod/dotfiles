@@ -53,6 +53,11 @@ brew "tfenv"
 brew "tree"
 # imagemagick image manipulation tool. Used e.g. for some nvim libraries.
 brew "imagemagick"
+# ripgrep - a line oriented search tool. Used for support in nvim kickstart.
+# Docs: https://github.com/BurntSushi/ripgrep
+brew "ripgrep"
+# fd - find alternative command line tool
+brew "fd"
 
 ################################################################################
 # Apps                                                                         #
