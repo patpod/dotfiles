@@ -60,6 +60,8 @@ brew "ripgrep"
 brew "rsync"
 # fd - find alternative command line tool
 brew "fd"
+# prettierd - Javascrip formatter daemon
+brew "prettierd"
 
 ################################################################################
 # Apps                                                                         #
