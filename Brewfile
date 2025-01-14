@@ -4,6 +4,7 @@
 tap "avisi-cloud/tools" # for structurizr-site-generatr
 tap "oven-sh/bun" # for the bun javarscript engine
 tap "hashicorp/tap" # for Hashicorp software (e.g. Packer)
+tap "jandedobbeleer/oh-my-posh" # Oh-My-Posh termial prompt
 
 ################################################################################
 # Binaries                                                                     #
@@ -41,6 +42,8 @@ brew "mas"
 brew "neovim"
 # Node Version Manager
 brew "nvm"
+# Oh My Posh - terminal prompt
+brew "oh-my-posh"
 # OpenJDK
 brew "openjdk"
 # Hashicorp Packer - Machine Image Builder

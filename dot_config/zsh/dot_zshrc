@@ -1,18 +1,8 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Install Zinit plugin package manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
-
-# Install Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Install zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -33,9 +23,6 @@ zinit snippet OMZP::kubectx
 autoload -U compinit && compinit
 zinit cdreplay -q
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
 # Keybindings
 bindkey -e
 bindkey '^p' history-search-backward
@@ -48,8 +35,7 @@ SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
-# A leading space when typing a command excludes it from the history
-setopt hist_ignore_space
+setopt hist_ignore_space # A leading space when typing a command excludes it from the history
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
@@ -67,9 +53,20 @@ alias vim='nvim'
 alias lvim="NVIM_APPNAME=lvim nvim"
 alias kvim="NVIM_APPNAME=kvim nvim"
 
+################################################################################
 # Shell integrations
+################################################################################
+
+# fzf - fuzzy search tool
 eval "$(fzf --zsh)"
+
+# zoxide - improved cd command
 eval "$(zoxide init --cmd cd zsh)"
+
+# oh my posh - terminal prompt
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+	eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME}/ohmyposh/zen.omp.toml)"
+fi
 
 # Configure nvm (node version manager)
 export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
