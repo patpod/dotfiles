@@ -64,6 +64,8 @@ brew "fd"
 brew "prettierd"
 # wget http utility
 brew "wget"
+# zoxoide - a smarter cd command
+brew "zoxide"
 
 ################################################################################
 # Apps                                                                         #
