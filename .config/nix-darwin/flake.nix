@@ -53,6 +53,8 @@
             pkgs.kubernetes-helm
             # Simple terminal UI for git commands 
             pkgs.lazygit
+            # LogSeq PKM tool
+            pkgs.logseq
             # Quick'n'dirty tool to make APFS aliases
             # Used for making GUI apps installed with nix available in Spotlight search
             pkgs.mkalias
