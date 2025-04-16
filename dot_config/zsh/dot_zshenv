@@ -1,9 +1,0 @@
-#!/bin/zsh
-
-# This file only boostraps the zsh configuration by setting the ZDOTDIR variable.
-# DO NOT MANIPULATE THIS FILE! INSTEAD ONLY MAKE CHANGES TO THE .zshenv FILE
-# IN THE ZDOTDIR
-
-# Set ZDOTDIR variable relative to XDG_CONFIG_HOME 
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
-export ZDOTDIR=${XDG_CONFIG_HOME}/zsh
