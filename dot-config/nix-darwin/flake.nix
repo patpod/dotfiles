@@ -35,6 +35,8 @@
             # pkgs.ghostty
             # Git - Distributed version control tool
             pkgs.git
+            # Git extension for versioning large files
+            pkgs.git-lfs
             # GNU Privacy Guard
             # e.g., used to sign git commits
             pkgs.gnupg
@@ -77,6 +79,8 @@
             pkgs.ripgrep
             # Fast incremental file transfer utility
             pkgs.rsync
+            # Rust build tool
+            pkgs.cargo
             # Easy and Repeatable Kubernetes Development
             pkgs.skaffold
             # stow symlink farm manger
@@ -104,6 +108,7 @@
             "ghostty" # Replace with nix package as soon as it is fixed
             "gpg-suite"
             "nextcloud"
+            "onedrive"
             "setapp"
             "signal"
           ];
