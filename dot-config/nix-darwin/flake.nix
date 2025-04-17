@@ -103,6 +103,7 @@
           casks = [
             "ghostty" # Replace with nix package as soon as it is fixed
             "gpg-suite"
+            "nextcloud"
             "setapp"
             "signal"
           ];
