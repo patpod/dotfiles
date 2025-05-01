@@ -20,7 +20,16 @@ zinit snippet OMZP::kubectx
 zinit snippet OMZP::common-aliases
 
 # Load completions
-autoload -U compinit && compinit
+autoload -Uz compinit 
+# Make sure compinit only recreates the completion chache if there are changes
+setopt EXTENDED_GLOB # Needed for the -nt (newer than) file test.
+_zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+if [[ -f "$_zcompdump" && (! -f "${ZDOTDIR:-$HOME}/.zshrc" || "$_zcompdump" -nt "${ZDOTDIR:-$HOME}/.zshrc") ]]; then
+	compinit -i -C -d "$_zcompdump"
+else
+	compinit -i -d "$_zcompdump"
+fi
+unset _zcompdump
 zinit cdreplay -q
 
 # Keybindings
@@ -66,13 +75,5 @@ eval "$(zoxide init --cmd cd zsh)"
 # oh my posh - terminal prompt
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 	eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME}/ohmyposh/zen.omp.toml)"
+	# eval "$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/marcduiker.omp.json)"
 fi
-
-# Configure nvm (node version manager)
-# export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
-#     [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
-#     [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-# Make Google Cloud SDK components available on PATH
-# source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-# source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
