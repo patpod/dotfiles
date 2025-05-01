@@ -1,3 +1,4 @@
+#zmodload zsh/zprof
 # Install Zinit plugin package manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -7,17 +8,19 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Install zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
+zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
+	zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # Add in snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::terraform
-zinit snippet OMZP::command-not-found
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::kubectx
-zinit snippet OMZP::common-aliases
+zinit wait lucid for \
+	OMZP::git \
+	OMZP::sudo \
+	OMZP::terraform \
+	OMZP::command-not-found \
+	OMZP::kubectl \
+	OMZP::kubectx \
+	OMZP::common-aliases
 
 # Load completions
 autoload -Uz compinit 
@@ -77,3 +80,4 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 	eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME}/ohmyposh/zen.omp.toml)"
 	# eval "$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/marcduiker.omp.json)"
 fi
+#zprof
