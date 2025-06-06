@@ -6,9 +6,10 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    mac-app-util.url = "github:hraban/mac-app-util";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util,... }:
   let
     configuration = { pkgs, config, ... }: {
 
@@ -22,8 +23,13 @@
             pkgs.ansible
             # Azure CLI - Next generation multi-platform command line experience for Azure
             pkgs.azure-cli
+            # Rust build tool
+            pkgs.cargo
             # GNU coreutils - the ones that come with MacOS are outdated
             pkgs.coreutils
+            # Feh lightweight image viewer
+            # Used for displaying PlantUML diagrams
+            pkgs.feh
             # Simple, fast and user-friendly alternative to find
             pkgs.fd
             # Fast Node Manager - Fast and simple Node.js version manager
@@ -42,6 +48,8 @@
             pkgs.gnupg
             # Google Cloud SDK - GCP command line utilities
             pkgs.google-cloud-sdk
+            # Go programming language
+            pkgs.go
             # Software suite to create, edit, compose, or convert bitmap images
             # Needed for some Neovim plugins
             pkgs.imagemagick
@@ -72,6 +80,8 @@
             pkgs.obsidian
             # Prompt theme engine for any shell
             pkgs.oh-my-posh
+            # PlantUML diagrams-as-code tool
+            pkgs.plantuml
             # prettier as a daemon, for improved formatting speed
             pkgs.prettierd
             # Utility that combines the usability of The Silver Searcher with the raw speed of grep
@@ -79,13 +89,13 @@
             pkgs.ripgrep
             # Fast incremental file transfer utility
             pkgs.rsync
-            # Rust build tool
-            pkgs.cargo
             # Easy and Repeatable Kubernetes Development
             pkgs.skaffold
             # stow symlink farm manger
             # Used for my dotfiles
             pkgs.stow
+            # Adoptium Temurin OpenJDK 23
+            pkgs.temurin-bin-23
             # tenv - OpenTofu, Terraform, Terragrunt and Atmos version manager written in Go 
             pkgs.tenv
             # Command to produce a depth indented directory listing 
@@ -111,6 +121,8 @@
             "onedrive"
             "setapp"
             "signal"
+            "veracrypt"
+            "zen"
           ];
           masApps = {
             "Daisydisk" = 411643860;
@@ -122,26 +134,6 @@
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
         };
-
-      system.activationScripts.applications.text = let
-        env = pkgs.buildEnv {
-          name = "system-applications";
-          paths = config.environment.systemPackages;
-          pathsToLink = "/Applications";
-        };
-      in
-        pkgs.lib.mkForce ''
-        # Set up applications.
-        echo "setting up /Applications..." >&2
-        rm -rf /Applications/Nix\ Apps
-        mkdir -p /Applications/Nix\ Apps
-        find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-        while read -r src; do
-          app_name=$(basename "$src")
-          echo "copying $src" >&2
-          ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
-        done
-            '';
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -164,24 +156,27 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#macbookbe
-    darwinConfigurations."macbookbe" = nix-darwin.lib.darwinSystem {
-      modules = [
-          configuration 
-          nix-homebrew.darwinModules.nix-homebrew
-          {
-            nix-homebrew = {
-              # Install Homebrew under the default prefix
-              enable = true;
+      darwinConfigurations = {
+        "ATGRZM4042139B" = nix-darwin.lib.darwinSystem {
+          modules = [
+            configuration
+            mac-app-util.darwinModules.default
+            nix-homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                # Install Homebrew under the default prefix
+                enable = true;
 
-              # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
-              enableRosetta = true;
+                # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+                enableRosetta = true;
 
-              # User owning the Homebrew prefix
-              user = "patrick.podbregar";
+                # User owning the Homebrew prefix
+                user = "patrick.podbregar";
 
-            };
-          }
-        ];
-    };
+              };
+            }
+          ];
+        };
+      };
   };
 }
