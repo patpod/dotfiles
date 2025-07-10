@@ -1,4 +1,4 @@
-#zmodload zsh/zprof
+# zmodload zsh/zprof
 # Install Zinit plugin package manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -80,4 +80,4 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 	eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME}/ohmyposh/zen.omp.toml)"
 	# eval "$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/marcduiker.omp.json)"
 fi
-#zprof
+# zprof
