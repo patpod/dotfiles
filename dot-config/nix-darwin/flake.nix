@@ -148,6 +148,8 @@
       # $ darwin-rebuild changelog
       system.stateVersion = 6;
 
+      system.primaryUser = "patrick.podbregar";
+
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
 
