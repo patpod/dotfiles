@@ -93,6 +93,8 @@
             pkgs.rsync
             # Easy and Repeatable Kubernetes Development
             pkgs.skaffold
+            # smartmontools - Tools for monitoring the health of hard drives
+            pkgs.smartmontools
             # stow symlink farm manger
             # Used for my dotfiles
             pkgs.stow
