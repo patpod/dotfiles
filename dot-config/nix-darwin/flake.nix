@@ -55,6 +55,8 @@
             pkgs.imagemagick
             # jq commandline JSON parser
             pkgs.jq
+            # kubectl - kubernetes CLI
+            pkgs.kubectl
             # Fast way to switch between clusters and namespaces in kubectl
             pkgs.kubectx
             # Kubernetes credential plugin implementing Azure authentication
