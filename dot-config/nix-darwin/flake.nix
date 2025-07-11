@@ -129,6 +129,7 @@
             "signal"
             "veracrypt"
             "zen"
+            "google-chrome"
           ];
           masApps = {
             "Daisydisk" = 411643860;
