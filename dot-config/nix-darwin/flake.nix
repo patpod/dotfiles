@@ -43,6 +43,8 @@
             pkgs.git
             # Git extension for versioning large files
             pkgs.git-lfs
+            # gitmux - Git in tmux status bar
+            pkgs.gitmux
             # GNU Privacy Guard
             # e.g., used to sign git commits
             pkgs.gnupg
@@ -104,12 +106,16 @@
             pkgs.temurin-bin-23
             # tenv - OpenTofu, Terraform, Terragrunt and Atmos version manager written in Go 
             pkgs.tenv
+            # tmux - terminal multiplexer
+            pkgs.tmux
             # Command to produce a depth indented directory listing 
             pkgs.tree
             # Visual Studio Code
             pkgs.vscode
             # Tool for retrieving files using HTTP, HTTPS, and FTP
             pkgs.wget
+            # yq - command line yaml processor
+            pkgs.yq
             # Fast cd command that learns your habits
             pkgs.zoxide
         ];
