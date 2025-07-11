@@ -98,6 +98,8 @@
             # stow symlink farm manger
             # Used for my dotfiles
             pkgs.stow
+            # talosctl - Talos Linux CLI tool
+            pkgs.talosctl
             # Adoptium Temurin OpenJDK 23
             pkgs.temurin-bin-23
             # tenv - OpenTofu, Terraform, Terragrunt and Atmos version manager written in Go 
