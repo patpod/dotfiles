@@ -23,6 +23,8 @@
             pkgs.ansible
             # Azure CLI - Next generation multi-platform command line experience for Azure
             pkgs.azure-cli
+            # bat - a cat clone with syntax higlighting and git integration
+            pkgs.bat
             # Rust build tool
             pkgs.cargo
             # GNU coreutils - the ones that come with MacOS are outdated
