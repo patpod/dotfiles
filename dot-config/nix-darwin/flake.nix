@@ -19,6 +19,8 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [ 
+            # Aerospace - tiling window manager
+            pkgs.aerospace
             # Ansible - Configuration management tool
             pkgs.ansible
             # Azure CLI - Next generation multi-platform command line experience for Azure
@@ -57,6 +59,8 @@
             # Software suite to create, edit, compose, or convert bitmap images
             # Needed for some Neovim plugins
             pkgs.imagemagick
+            # JankyBorders - Tool to make the active window on MacOS more visible
+            pkgs.jankyborders
             # jq commandline JSON parser
             pkgs.jq
             # kubectl - kubernetes CLI
