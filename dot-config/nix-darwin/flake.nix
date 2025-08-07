@@ -27,6 +27,8 @@
             pkgs.azure-cli
             # bat - a cat clone with syntax higlighting and git integration
             pkgs.bat
+            # bruno - Open Source IDE for exploring and testing APIs
+            pkgs.bruno
             # Rust build tool
             pkgs.cargo
             # GNU coreutils - the ones that come with MacOS are outdated
