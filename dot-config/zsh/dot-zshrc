@@ -80,4 +80,8 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 	eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME}/ohmyposh/zen.omp.toml)"
 	# eval "$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/marcduiker.omp.json)"
 fi
+
+# fnm - fast node manager
+export PATH=/home/$USER/.fnm:$PATH
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 # zprof
