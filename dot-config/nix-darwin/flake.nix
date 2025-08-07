@@ -116,6 +116,8 @@
             pkgs.tenv
             # tmux - terminal multiplexer
             pkgs.tmux
+            # tmuxifier - session, window & pane management tool for tmux
+            pkgs.tmuxifier
             # Command to produce a depth indented directory listing 
             pkgs.tree
             # Visual Studio Code
