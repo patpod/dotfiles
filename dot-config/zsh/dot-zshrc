@@ -61,9 +61,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
-alias vim='nvim'
+alias vim="nvim"
 alias lvim="NVIM_APPNAME=lvim nvim"
 alias kvim="NVIM_APPNAME=kvim nvim"
+
+# Set default editor
+export EDITOR="nvim"
 
 ################################################################################
 # Shell integrations
