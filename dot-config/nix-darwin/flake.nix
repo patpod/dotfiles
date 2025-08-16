@@ -21,6 +21,8 @@
         [ 
             # Aerospace - tiling window manager
             pkgs.aerospace
+            # age - encryption tool
+            pkgs.age
             # Ansible - Configuration management tool
             pkgs.ansible
             # Azure CLI - Next generation multi-platform command line experience for Azure
@@ -105,6 +107,8 @@
             pkgs.skaffold
             # smartmontools - Tools for monitoring the health of hard drives
             pkgs.smartmontools
+            # sops - tool for managing secrets
+            pkgs.sops
             # stow symlink farm manger
             # Used for my dotfiles
             pkgs.stow
