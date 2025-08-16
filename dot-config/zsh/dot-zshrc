@@ -39,6 +39,7 @@ zinit cdreplay -q
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey '^[[3~' delete-char # Fix the problem that delete key prints tilde
 
 # History
 HISTSIZE=5000
