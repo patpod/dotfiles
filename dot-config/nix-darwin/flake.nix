@@ -9,7 +9,7 @@
     mac-app-util.url = "github:hraban/mac-app-util";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util,... }:
+  outputs = { self, nix-darwin, nix-homebrew, mac-app-util,... }:
   let
     configuration = { pkgs, config, ... }: {
 
