@@ -1,6 +1,8 @@
 **/.DS_Store
-dot-config/tmux/plugins/
+tmux/dot-config/tmux/plugins/
 
 # age private key file
 sops/dot-config/sops/age/keys.txt
 
+# ssh files
+ssh/dot-ssh/*known_hosts
