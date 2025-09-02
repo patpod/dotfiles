@@ -2,5 +2,5 @@
 dot-config/tmux/plugins/
 
 # age private key file
-dot-config/sops/age/keys.txt
+sops/dot-config/sops/age/keys.txt
 
