@@ -5,4 +5,6 @@ tmux/dot-config/tmux/plugins/
 sops/dot-config/sops/age/keys.txt
 
 # ssh files
-ssh/dot-ssh/*known_hosts
+ssh/dot-ssh/*
+!ssh/dot-ssh/*.pub
+!ssh/dot-ssh/*.sops
