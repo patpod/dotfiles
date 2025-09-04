@@ -149,6 +149,7 @@
             "gpg-suite"
             "nextcloud"
             "onedrive"
+            "proton-mail"
             "setapp"
             "signal"
             "veracrypt"
