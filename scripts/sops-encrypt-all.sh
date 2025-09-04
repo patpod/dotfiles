@@ -4,6 +4,20 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 NC='\033[0m'
 
+dryrun=false
+while [[ "$#" -gt 0 ]]; do
+  case "$1" in
+  -d | --dryrun)
+    dryrun=true
+    shift
+    ;;
+  *)
+    echo "Error: Unknown flag '$1'"
+    exit 1
+    ;;
+  esac
+done
+
 while IFS= read -r path_regex; do
   find . -regextype egrep -regex ".*/$path_regex" -type f | while IFS= read -r path; do
 
@@ -33,13 +47,13 @@ while IFS= read -r path_regex; do
         echo -e "${GREEN}No changes detected. Skipping encryption for file: $path${NC}"
       else
         echo -e "${RED}Changes detected. Re-encrypting file: $path${NC}"
-        sops --encrypt "$path" >"$encrypted_path"
+        [ "$dryrun" = false ] && sops --encrypt "$path" >"$encrypted_path"
       fi
 
     else
       # No encrypted version exists. Encrypt the file.
       echo -e "${RED}Encrypting file: $path${NC}"
-      sops --encrypt "$path" >"$encrypted_path"
+      [ "$dryrun" = false ] && sops --encrypt "$path" >"$encrypted_path"
     fi
   done
 done < <(grep -oP '\s*- path_regex:\s*\K.*' ".sops.yaml")
