@@ -18,8 +18,8 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
-find . -regextype egrep -regex ".*\/.+\.sops$|.*\/.+\.sops\." -type f | while IFS= read -r filename; do
-  decrypted_filename="${filename//.sops./}"
+find . -regextype egrep -regex ".*\/.+\.sops$|.*\/.+\.sops\..+" -type f | while IFS= read -r filename; do
+  decrypted_filename="${filename//.sops/}"
   decrypted_filename="${decrypted_filename%.sops}"
 
   if [ -f "$decrypted_filename" ]; then
