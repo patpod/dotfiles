@@ -6,6 +6,12 @@ NC='\033[0m'
 
 while IFS= read -r path_regex; do
   find . -regextype egrep -regex ".*/$path_regex" -type f | while IFS= read -r path; do
+
+    # Skip path if it is already an encrypted file
+    if [[ "$path" =~ \.sops\. || "$path" =~ \.sops$ ]]; then
+      continue
+    fi
+
     dir=$(dirname "$path")
     filename=$(basename "$path")
 
