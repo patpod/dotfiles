@@ -146,6 +146,7 @@
           enable = true;
           casks = [
             "ghostty" # Replace with nix package as soon as it is fixed
+            "google-chrome"
             "gpg-suite"
             "nextcloud"
             "onedrive"
@@ -153,8 +154,8 @@
             "setapp"
             "signal"
             "veracrypt"
+            "vivaldi"
             "zen"
-            "google-chrome"
           ];
           masApps = {
             "Daisydisk" = 411643860;
