@@ -4,5 +4,14 @@ creation_rules:
   # ssh private key files starting with id_
   - path_regex: ssh/dot-ssh/id_[A-Za-z0-9_ -]*$
     age: age1v3fks8crfh4a8m5tszhdr977ckzedg9ak3f6hhwtjkmr58665fgsqs080u
+
+  # GnuPG files
+  - path_regex: gnupg/dot-gnupg/private-keys-v1.d/.+\.key
+    age: age1v3fks8crfh4a8m5tszhdr977ckzedg9ak3f6hhwtjkmr58665fgsqs080u
+  - path_regex: gnupg/dot-gnupg/pubring.kbx
+    age: age1v3fks8crfh4a8m5tszhdr977ckzedg9ak3f6hhwtjkmr58665fgsqs080u
+  - path_regex: gnupg/dot-gnupg/trustdb.gpg
+    age: age1v3fks8crfh4a8m5tszhdr977ckzedg9ak3f6hhwtjkmr58665fgsqs080u
+
   # Fallback
-  # - age: age1v3fks8crfh4a8m5tszhdr977ckzedg9ak3f6hhwtjkmr58665fgsqs080u
+  - age: age1v3fks8crfh4a8m5tszhdr977ckzedg9ak3f6hhwtjkmr58665fgsqs080u

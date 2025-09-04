@@ -8,3 +8,9 @@ sops/dot-config/sops/age/keys.txt
 ssh/dot-ssh/*
 !ssh/dot-ssh/*.pub
 !ssh/dot-ssh/*.sops
+
+# GnuPG files
+gnupg/dot-gnupg/private-keys-v1.d/*
+!gnupg/dot-gnupg/private-keys-v1.d/*.sops.key
+gnupg/dot-gnupg/pubring.kbx
+gnupg/dot-gnupg/trustdb.gpg
