@@ -40,6 +40,8 @@
             pkgs.feh
             # Simple, fast and user-friendly alternative to find
             pkgs.fd
+            # GNU find utils
+            pkgs.findutils
             # Fast Node Manager - Fast and simple Node.js version manager
             pkgs.fnm
             # fzf - Command-line fuzzy finder
@@ -56,6 +58,8 @@
             # GNU Privacy Guard
             # e.g., used to sign git commits
             pkgs.gnupg
+            # GNU implementation of the grep command (installed on mac for compatibility in scipts)
+            pkgs.gnugrep
             # Google Cloud SDK - GCP command line utilities
             pkgs.google-cloud-sdk
             # Go programming language
